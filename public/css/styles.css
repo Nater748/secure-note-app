@@ -1,0 +1,501 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #f4f6f8;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  background: grey;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo .title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color:white ;
+}
+
+.nav a{
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.search-profile {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.search-profile a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+.search-box {
+  display: flex;
+  align-items: center;
+  background: #e7edf4;
+  border-radius: 8px;
+  padding: 0 8px;
+}
+.search-icon svg {
+  width: 20px;
+  height: 20px;
+  color: #49709c;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 8px;
+  font-size: 14px;
+  color: #0d141c;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.form-box {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 400px;
+}
+
+.form-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #2c3e50;
+}
+
+.field {
+  margin-bottom: 1rem;
+}
+
+.input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.input:focus {
+  border-color: #007bff;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.checkbox {
+  width: 16px;
+  height: 16px;
+}
+
+.btn-full {
+  width: 100%;
+  padding: 0.8rem;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-full:hover {
+  background: #0056b3;
+}
+
+.note {
+  text-decoration: none;
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.note a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.note a:hover {
+  text-decoration: underline;
+}
+
+.note-form {
+  width: 87%;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.6);
+}
+
+.note-form .heading {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.note-form .page-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.note-form .input,
+.note-form .textarea {
+  width: 100%;
+  padding: 20px;
+  margin: 20px auto;
+  border: 1px solid black;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: border-color 0.3s ease;
+}
+
+.note-form .textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.color-picker {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.color-circle {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+  display: inline-block;
+}
+
+input[type="radio"]:checked + .color-circle {
+  border: 2px solid #000;
+}
+
+.note-form .actions {
+  text-align: right;
+}
+
+.note-form .btn {
+  background: #007bff;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.note-form .btn:hover {
+  background: #0056b3;
+}
+
+.notes-wrapper {
+  margin-top: 2rem;
+}
+
+.notes-wrapper .sub-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-left: 25px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.table-container {
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  width: 92%;
+  margin: 0 auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse:separate;
+}
+
+.table th,
+.table td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid rgb(96, 93, 93);
+}
+
+.table th {
+  font-weight: 600;
+  background-color: #f9f9f9;
+}
+
+.btn-link {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  text-decoration: none;
+  margin-right: 6px;
+  transition: background 0.3s ease;
+}
+
+.btn-link.edit {
+  color: black;
+}
+
+.btn-link.delete {
+  color: black;
+}
+
+.container {
+  width: 80%;
+  margin: 80px auto;
+  background: #fff;
+  /* padding: 50px 40px; */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.set {
+  background: #ffffff;              
+  border-radius: 12px;              
+  padding: 20px 25px;               
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08); 
+  width: 600px;                 
+  margin: 60px auto;                
+  font-family: "Inter", sans-serif; 
+  color: #2c3e50;                   
+  line-height: 1.6;               
+}
+
+.set h4 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;             
+  color: #1a73e8;                   
+}
+
+.set p {
+  font-size: 15px;
+  margin: 0;                        
+}
+
+.main-content {
+  width: 80%;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f9fafb;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.page-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 30px;
+}
+
+.note-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8fafc;
+  padding: 12px 16px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+.note-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.note-icon {
+  background: #e7edf4;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.note-icon svg {
+  width: 24px;
+  height: 24px;
+}
+.note-details{
+  text-decoration: none;
+  color: black;
+}
+
+.note-title{
+  font-weight: 600;
+}
+
+.note-date {
+  color: #49709c;
+  font-size: 14px;
+}
+
+.btn-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.btn-delete,
+.btn-edit {
+  background: none;
+  border: none;
+  color: #0d141c;
+  text-decoration: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn-restore{
+  background: none;
+  border: none;
+  color: #0d141c;
+  text-decoration: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.trash-actions {
+  text-align: right;
+  margin-top: 20px;
+  display: flex;
+  align-items:center;
+  justify-content: space-between;
+}
+
+.btn-empty {
+  background: #e7edf4;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+.btn-align {
+  background: #e7edf4;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+.alert-success{
+  text-align: center;
+  color: green;
+}
+
+.alert-danger{
+  text-align: center;
+  color:red;
+}
+
+.rot{
+  text-decoration: none;
+  color: black;
+}
+
+.list{
+  text-align: right;
+  margin-top: 20px;
+}
+
+.btn-num {
+  background: #e7edf4;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+.btn-link {
+  background: none;
+  border: none;
+  color: black;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  gap: 6px;
+  font-family: Arial, sans-serif;
+}
+
+.pagination .page-link {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  transition: all 0.2s ease-in-out;
+}
+
+.pagination .active .page-link {
+  background-color: #007bff;
+  color: white !important;
+  border-color: #007bff;
+  font-weight: bold;
+}
+
+.pagination .disabled .page-link {
+  color: #aaa;
+  pointer-events: none;
+  background-color: #f9f9f9;
+}
